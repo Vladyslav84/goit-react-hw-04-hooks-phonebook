@@ -62,8 +62,8 @@ function App() {
     <div className={s.container}>
       <h1 className={s.title}>Phonebook</h1>
       <ContactForm onSubmit={formSubmithandler} />
-      <h2 className={s.title}>Contacts</h2>
-      <Filter value={filtered} onChange={filtеredValue} />
+      {contacts.length !== 0 && <h2 className={s.title}>Contacts</h2>}
+      {contacts.length !== 0 && <Filter value={filtered} onChange={filtеredValue} />}
       <ContactList
         contactsArr={filteredContactList}
         onDeleteContact={deleteContact}
